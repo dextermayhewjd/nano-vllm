@@ -1,9 +1,12 @@
 """T0-1 package bootstrap entry.
 
 Why this file now:
-- T0-1 is about project bootstrap, and a Python package needs an explicit entry.
-- This unlocks incremental follow-up files (llm.py, sampling_params.py) without changing more than one file per step.
-- Keeps scope minimal and aligned with the one-file-per-change workflow.
+- We already have `llm.py` and `sampling_params.py` placeholders.
+- Exporting both at package level aligns with the original public API shape.
+- This keeps the one-file-per-change flow while making user imports cleaner.
 """
 
-__all__: list[str] = []
+from .llm import LLM
+from .sampling_params import SamplingParams
+
+__all__ = ["LLM", "SamplingParams"]
