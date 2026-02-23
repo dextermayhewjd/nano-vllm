@@ -1,0 +1,19 @@
+[project]
+name = "nano-vllm-repro-t0"
+version = "0.1.0"
+description = "T0-1 bootstrap with uv-managed environment (single-file delivery)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "triton",
+  "transformers",
+  "cmake",
+  "ninja",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = []
